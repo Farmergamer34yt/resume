@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f7fc;
+}
+
+header {
+    position: relative;
+    background: linear-gradient(120deg, #6a11cb 30%, #2575fc 90%);
+    padding: 3rem 1rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15), transparent);
+    transform: rotate(45deg);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+}
+
+/* About Section */
+#about {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #2575fc;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #2575fc;
+    padding-bottom: 0.5rem;
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+#about h3 {
+    font-size: 1.75rem;
+    color: #2575fc;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+}
+/* Gaming Mains and Ranks Section */
+#gaming-mains, #gaming-ranks {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#gaming-mains h2, #gaming-ranks h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2575fc;
+    margin-bottom: 1.5rem;
+}
+
+.game h3 {
+    color: #6a11cb;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+#gaming-mains ul, #gaming-ranks ul {
+    list-style: none;
+    padding: 0;
+}
+
+#gaming-mains ul li, #gaming-ranks ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#gaming-mains ul li::before, #gaming-ranks ul li::before {
+    content: "🎮"; /* Gaming icon for styling */
+    color: #2575fc;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+}
+
+#about ul li {
+    margin-bottom: 1rem;
+}
+
+#about ul li::before {
+    content: "•";
+    color: #2575fc;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+}
+
+#about a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#about a:hover {
+    color: #1b5cb8;
+    text-decoration: underline;
+}
+
+#about .highlight {
+    font-weight: bold;
+    color: #2575fc;
+}
+
+#projects {
+    max-width: 800px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #2575fc;
+    margin-bottom: 1rem;
+}
+
+.panel p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    background: linear-gradient(120deg, #2575fc, #6a11cb);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: linear-gradient(120deg, #6a11cb, #2575fc);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+}
+
+.accordion {
+    background: #2575fc;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition:
+        background 0.3s,
+        transform 0.3s;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+
+.accordion:hover {
+    background: #6a11cb;
+    transform: scale(1.02);
+}
+.accordion.expanded {
+    background: #6a11cb;
+    color: #fff;
+    font-weight: bold;
+}
+
+.panel {
+    display: none;
+    background: #f9f9f9;
+    border-left: 4px solid #2575fc;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: -0.5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+#social-media {
+    max-width: 800px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+#social-media h2 {
+    font-size: 2rem;
+    color: #2575fc;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-icon {
+    font-size: 2.5rem;
+    color: #333;
+    transition:
+        transform 0.3s,
+        color 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Custom colors for each platform */
+.social-icon.github {
+    color: #333;
+}
+
+.social-icon.github:hover {
+    color: #6a6a6a;
+}
+
+.social-icon.linkedin {
+    color: #0e76a8;
+}
+
+.social-icon.linkedin:hover {
+    color: #005582;
+}
+
+.social-icon.twitter {
+    color: #1da1f2;
+}
+
+.social-icon.twitter:hover {
+    color: #0e71c8;
+}
+.social-icon.discord {
+    color: #7289da;
+}
+.social-icon.discord:hover {
+    color: #54649d;
+}
+.social-icon.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.social-icon.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #cec266 0%, #bfb875 5%, #bf4438 45%, #a11c78 60%, #294bad 90%);
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tabs-menu {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.tabs-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tabs-menu li {
+    display: inline;
+}
+
+.tabs-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tabs-menu a:hover {
+    background-color: #555;
+}
+.highlight-section {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
